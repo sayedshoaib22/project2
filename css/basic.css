@@ -1,0 +1,19 @@
+/*  Color Palettes  */
+/*  Fonts Wariables */
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/assets/font/Roboto/Roboto-VariableFont_wdth,wght.ttf");
+}/*# sourceMappingURL=basic.css.map */

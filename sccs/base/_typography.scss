@@ -1,0 +1,6 @@
+$font-name : "Roboto-VariableFont_wdth,wght.ttf";
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/font/Roboto/"+$font-name);
+}
