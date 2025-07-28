@@ -12,11 +12,115 @@
     border-radius: 3px;
     cursor: pointer;
     
+    &:hover{
+        background: lighten($light-color, 10%);
+        color: $dark-color;
+    }
 
 
     &:active{
         animation: clickme 0.2s;
     }
+
+    &:focus{
+        outline: 2px solid $primary-color;
+        outline-offset: 0px;
+    }
+
+    &.btn{
+        &-primary{
+            background: $primary-color;
+            color: $light-color;
+            &:hover{
+                background: darken($primary-color, 10%);
+            }
+        }
+        &-secondary{
+            background: $secondary-color;
+            color: $light-color;
+            &:hover{
+                background: darken($secondary-color, 10%);
+            }
+        }
+        &-success{
+            background: $success-color;
+            color: $light-color;
+            &:hover{
+                background: darken($success-color, 10%);
+            }
+        }
+        &-danger{
+            background: $danger-color;
+            color: $light-color;
+            &:hover{
+                background: darken($danger-color, 10%);
+            }
+        }
+        &-warning{
+            background: $warning-color;
+            color: $light-color;
+            &:hover{
+                background: darken($warning-color, 10%);
+            }
+        }
+        &-info{
+            background: $info-color;
+            color: $light-color;
+            &:hover{
+                background: darken($info-color, 10%);
+            }
+        }
+        &-dark{
+            background: $dark-color;
+            color: $light-color;
+            &:hover{
+                background: darken($dark-color, 10%);
+            }
+        }
+        &-light{
+            background: $light-color;
+            color: $dark-color;
+            &:hover{
+                background: lighten($light-color, 10%);
+            }
+        }
+        &-outline{
+            background: transparent;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+
+            &:hover{
+                background: $primary-color;
+                color: $light-color;
+            }
+        }
+        &-link{
+            background: transparent;
+            color: $primary-color;
+            text-decoration: underline;
+
+            &:hover{
+                color: darken($primary-color, 10%);
+            }
+        }
+
+    }
+
+    &:disabled, &.disabled{
+        background: $gray-color;
+        color: $light-color;
+        cursor: not-allowed;
+        animation: none;
+        &:hover{
+            background: $gray-color;
+            color: $light-color;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+
+    
 }
 
 

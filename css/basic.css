@@ -21,6 +21,41 @@ body {
   font-size: 12px;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  margin: 0;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #e2e2e2;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("/assets/font/Roboto/Roboto-VariableFont_wdth,wght.ttf");
@@ -39,6 +74,100 @@ body {
   border-radius: 3px;
   cursor: pointer;
 }
+.btn:hover {
+  background: white;
+  color: #333;
+}
 .btn:active {
   animation: clickme 0.2s;
+}
+.btn:focus {
+  outline: 2px solid #1d3557;
+  outline-offset: 0px;
+}
+.btn.btn-primary {
+  background: #1d3557;
+  color: #f1faee;
+}
+.btn.btn-primary:hover {
+  background: rgb(16.25, 29.6982758621, 48.75);
+}
+.btn.btn-secondary {
+  background: #e63946;
+  color: #f1faee;
+}
+.btn.btn-secondary:hover {
+  background: rgb(209.5426008969, 26.4573991031, 40.2152466368);
+}
+.btn.btn-success {
+  background: #236d2d;
+  color: #f1faee;
+}
+.btn.btn-success:hover {
+  background: rgb(22.6041666667, 70.3958333333, 29.0625);
+}
+.btn.btn-danger {
+  background: #e63946;
+  color: #f1faee;
+}
+.btn.btn-danger:hover {
+  background: rgb(209.5426008969, 26.4573991031, 40.2152466368);
+}
+.btn.btn-warning {
+  background: #f58b29;
+  color: #f1faee;
+}
+.btn.btn-warning:hover {
+  background: rgb(224.5089285714, 113.3035714286, 10.4910714286);
+}
+.btn.btn-info {
+  background: #457b9d;
+  color: #f1faee;
+}
+.btn.btn-info:hover {
+  background: rgb(53.4292035398, 95.2433628319, 121.5707964602);
+}
+.btn.btn-dark {
+  background: #333;
+  color: #f1faee;
+}
+.btn.btn-dark:hover {
+  background: rgb(25.5, 25.5, 25.5);
+}
+.btn.btn-light {
+  background: #f1faee;
+  color: #333;
+}
+.btn.btn-light:hover {
+  background: white;
+}
+.btn.btn-outline {
+  background: transparent;
+  border: 1px solid #1d3557;
+  color: #1d3557;
+}
+.btn.btn-outline:hover {
+  background: #1d3557;
+  color: #f1faee;
+}
+.btn.btn-link {
+  background: transparent;
+  color: #1d3557;
+  text-decoration: underline;
+}
+.btn.btn-link:hover {
+  color: rgb(16.25, 29.6982758621, 48.75);
+}
+.btn:disabled, .btn.disabled {
+  background: #666;
+  color: #f1faee;
+  cursor: not-allowed;
+  animation: none;
+}
+.btn:disabled:hover, .btn.disabled:hover {
+  background: #666;
+  color: #f1faee;
+}
+.btn:disabled:focus, .btn.disabled:focus {
+  outline: none;
 }/*# sourceMappingURL=basic.css.map */
