@@ -1,0 +1,46 @@
+.form{
+    &-control{
+        width: 100%;
+        padding-block: 10px;
+        padding-inline: 14px;
+        font-size: $font-size-base;
+        line-height: 1.5;
+        color: $text-color;
+        background-color: $white-color;
+        border: 1px solid $border-color;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    &-label{
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: $font-size-base;
+        font-weight: $font-medium;
+        color: $text-color;
+        transition: 0.2s;
+    }
+
+    &-group{
+        position: relative;
+        margin-bottom: 1rem;
+        .form-label{
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            margin: 0px;
+            padding-inline: 4px;
+
+            &:has(+ .form-control:not(:placeholder-shown)),
+            &:has(+ .form-control:focus)
+            {
+               top: -10px;
+               margin-bottom: 0.5rem;
+               background: $white-color;
+               
+            }
+        }
+
+       
+    }
+}

@@ -1,5 +1,6 @@
 /*  Color Palettes  */
 /*  Fonts Wariables */
+/*  Font Sizes  */
 @keyframes clickme {
   from {
     transform: scale(0.9);
@@ -66,8 +67,8 @@ img {
   text-decoration: none;
   border: none;
   background: #f1faee;
-  font-size: 12px;
-  color: #333;
+  font-size: 1rem;
+  color: #000;
   font-weight: 400;
   padding-block: 10px;
   padding-inline: 14px;
@@ -170,4 +171,46 @@ img {
 }
 .btn:disabled:focus, .btn.disabled:focus {
   outline: none;
+}
+
+.form-control {
+  width: 100%;
+  padding-block: 10px;
+  padding-inline: 14px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  transition: 0.2s;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.form-group .form-label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  margin: 0px;
+  padding-inline: 4px;
+}
+.form-group .form-label:has(+ .form-control:not(:-moz-placeholder)) {
+  top: -10px;
+  margin-bottom: 0.5rem;
+  background: #fff;
+}
+.form-group .form-label:has(+ .form-control:not(:placeholder-shown)), .form-group .form-label:has(+ .form-control:focus) {
+  top: -10px;
+  margin-bottom: 0.5rem;
+  background: #fff;
 }/*# sourceMappingURL=basic.css.map */

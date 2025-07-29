@@ -4,7 +4,7 @@
 $primary-color: #1d3557;
 $secondary-color: #e63946;
 
-$back-color:#000;
+$black-color:#000;
 $dark-color: #333;
 $gray-color: #666;
 
@@ -23,7 +23,7 @@ $danger-color: $secondary-color;
 $warning-color:#f58b29;
 $info-color: $blue-color;
 
-$text-color:$back-color;
+$text-color:$black-color;
 
 
 /*  Fonts Wariables */ 
@@ -38,6 +38,17 @@ $font-semi-bold: 600;
 $font-bold: 700;
 $font-extra-bold: 800;
 $font-black: 800;
+
+/*  Font Sizes  */
+
+$font-size-xxs: 0.625rem; // 10px
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-xxl: 2rem; // 32px
+$font-size-xxxl: 3rem; // 48px
 
 
 
