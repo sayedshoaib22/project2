@@ -174,7 +174,7 @@ img {
 }
 
 .form-control {
-  width: 100%;
+  width: 50%;
   padding-block: 10px;
   padding-inline: 14px;
   font-size: 1rem;
@@ -184,6 +184,10 @@ img {
   border: 1px solid #e2e2e2;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:disabled {
+  background-color: #666;
+  cursor: not-allowed;
 }
 .form-label {
   display: block;
@@ -196,6 +200,7 @@ img {
 .form-group {
   position: relative;
   margin-bottom: 1rem;
+  width: 100%;
 }
 .form-group .form-label {
   position: absolute;
@@ -213,4 +218,10 @@ img {
   top: -10px;
   margin-bottom: 0.5rem;
   background: #fff;
+}
+.form-group .form-label:has(+ .form-control:disabled) {
+  color: #fff;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=basic.css.map */
