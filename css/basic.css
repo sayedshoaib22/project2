@@ -174,7 +174,7 @@ img {
 }
 
 .form-control {
-  width: 50%;
+  width: 100%;
   padding-block: 10px;
   padding-inline: 14px;
   font-size: 1rem;
@@ -186,8 +186,8 @@ img {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .form-control:disabled {
-  background-color: #666;
-  cursor: not-allowed;
+  background-color: #f1faee;
+  color: #333;
 }
 .form-label {
   display: block;
@@ -196,9 +196,11 @@ img {
   font-weight: 500;
   color: #000;
   transition: 0.2s;
+  border-radius: 5px;
 }
 .form-group {
   position: relative;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   width: 100%;
 }
@@ -219,9 +221,60 @@ img {
   margin-bottom: 0.5rem;
   background: #fff;
 }
-.form-group .form-label:has(+ .form-control:disabled) {
-  color: #fff;
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 0.75rem;
+.form-check {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+}
+.form-check .form-label {
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  padding-left: 26px;
+}
+.form-check .form-label:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 100px;
+  background-color: #fff;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+.form-check .form-label:after {
+  content: "";
+  position: absolute;
+  top: 3.5px;
+  left: 3.5px;
+  width: 11px;
+  height: 11px;
+  background-color: #1d3557;
+  border-radius: 100px;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+.form-check .form-control {
+  position: absolute;
+  opacity: 0;
+  margin: 0px;
+}
+.form-check .form-control[type=checkbox] + .form-label:before {
+  border-radius: 3px;
+}
+.form-check .form-control[type=checkbox] + .form-label:after {
+  border-radius: 0px;
+  height: 4px;
+  background-color: transparent;
+  border-bottom: 2px solid #1d3557;
+  border-left: 2px solid #1d3557;
+  transform: rotate(-45deg);
+  top: 4.5px;
+  left: 2.5px;
+}
+.form-check .form-control:checked + .form-label::after {
+  opacity: 1;
 }/*# sourceMappingURL=basic.css.map */

@@ -1,6 +1,6 @@
 .form{
     &-control{
-        width: 50%;
+        width: 100%;
         padding-block: 10px;
         padding-inline: 14px;
         font-size: $font-size-base;
@@ -12,9 +12,8 @@
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     
             &:disabled{
-                background-color: $gray-color;
-
-                cursor: not-allowed;
+                background-color: $light-color;
+                color: $dark-color;
             }
            
     }
@@ -26,10 +25,12 @@
         font-weight: $font-medium;
         color: $text-color;
         transition: 0.2s;
+        border-radius: 5px;
     }
 
     &-group{
         position: relative;
+        margin-top: 1rem;
         margin-bottom: 1rem;
         width: 100%;
         .form-label{
@@ -47,14 +48,80 @@
                background: $white-color;
                
             }   
-             &:has(+ .form-control:disabled){
-                color: $white-color;
-                font-family: Roboto;
-                font-weight: $font-regular;
-                font-size: $font-size-xs;
-            }      
+            //  &:has(+ .form-control:disabled){
+             
+            // }      
         }
 
        
     }
+
+
+    &-check{
+        position: relative;
+        display: inline-flex;
+        align-items: flex-start;
+
+        
+        .form-label{
+            cursor: pointer;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            padding-left: 16px + 10px;
+            
+            &:before{
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $border-color;
+                border-radius: 100px;
+                background-color: $white-color;
+                transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                top: 3.5px;
+                left: 3.5px;
+                width: 11px;
+                height: 11px;
+                background-color: $primary-color;
+                border-radius: 100px;
+                opacity: 0;
+                transition: opacity 0.15s ease-in-out;
+            }
+            
+        }
+        .form-control{
+            position: absolute;
+            opacity: 0;
+            margin: 0px;
+
+            &[type="checkbox"] + .form-label{
+               &:before{
+                  border-radius: 3px;
+                }
+                &:after{
+                    border-radius: 0px;
+                    height: 4px;
+                    background-color: transparent;
+                    border-bottom: 2px solid $primary-color;
+                    border-left: 2px solid $primary-color;
+                    transform: rotate(-45deg);
+                    top: 4.5px;
+                    left: 2.5px;
+                }
+            }
+
+            &:checked + .form-label::after{
+                opacity: 1; 
+            }
+        }
+    }
+
+
 }
