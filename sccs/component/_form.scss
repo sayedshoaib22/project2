@@ -102,9 +102,7 @@
             margin: 0px;
 
             &[type="checkbox"] + .form-label{
-               &:before{
-                  border-radius: 3px;
-                }
+                &:before{ border-radius: 3px; }
                 &:after{
                     border-radius: 0px;
                     height: 4px;
@@ -117,10 +115,67 @@
                 }
             }
 
-            &:checked + .form-label::after{
-                opacity: 1; 
+            &:checked + .form-label::after{ opacity: 1;}
+
+             &:disabled + .form-label{
+                &::before{
+                    background-color: $light-color;
+                    border-color: $gray-color;
+                    cursor: not-allowed;
+                }
+               
+                &::after{
+                    background-color: $gray-color;
+                    
+                }
+             } 
+             &:disabled:checked + .form-label{
+                &::after{
+                    background-color: unset;
+                    border-color: $gray-color;
+                }
             }
         }
+
+
+        &.form-switch{
+            .form-label{
+                padding-left: 26px + 10px;
+                &:before{ width: 26px;}
+                &:after{ opacity: 1; transition: 0.5s; }
+            }
+
+            .form-control{
+
+                 &[type="checkbox"] + .form-label{
+                    &:before{ border-radius: 100px; }
+                    &:after{
+                        top: 3.5px;
+                        left: 3.5px;
+                        width: 11px;
+                        height: 11px;
+                        border: unset;
+                        background-color: $primary-color;
+                        transform: unset;
+                        border-radius: 100px;
+                    }
+                 }
+
+                &:checked + .form-label{
+                    &:before{
+                        background-color: $primary-color;
+                        border-color: $primary-color;
+                    }
+                    &:after{
+                        left: 13px;
+                        background-color: $white-color;
+                    }
+                }
+            }
+
+        
+        }
+       
     }
 
 

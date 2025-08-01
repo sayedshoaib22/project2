@@ -277,4 +277,47 @@ img {
 }
 .form-check .form-control:checked + .form-label::after {
   opacity: 1;
+}
+.form-check .form-control:disabled + .form-label::before {
+  background-color: #f1faee;
+  border-color: #666;
+  cursor: not-allowed;
+}
+.form-check .form-control:disabled + .form-label::after {
+  background-color: #666;
+}
+.form-check .form-control:disabled:checked + .form-label::after {
+  background-color: unset;
+  border-color: #666;
+}
+.form-check.form-switch .form-label {
+  padding-left: 36px;
+}
+.form-check.form-switch .form-label:before {
+  width: 26px;
+}
+.form-check.form-switch .form-label:after {
+  opacity: 1;
+  transition: 0.5s;
+}
+.form-check.form-switch .form-control[type=checkbox] + .form-label:before {
+  border-radius: 100px;
+}
+.form-check.form-switch .form-control[type=checkbox] + .form-label:after {
+  top: 3.5px;
+  left: 3.5px;
+  width: 11px;
+  height: 11px;
+  border: unset;
+  background-color: #1d3557;
+  transform: unset;
+  border-radius: 100px;
+}
+.form-check.form-switch .form-control:checked + .form-label:before {
+  background-color: #1d3557;
+  border-color: #1d3557;
+}
+.form-check.form-switch .form-control:checked + .form-label:after {
+  left: 13px;
+  background-color: #fff;
 }/*# sourceMappingURL=basic.css.map */
