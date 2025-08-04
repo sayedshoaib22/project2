@@ -48,10 +48,14 @@
                background: $white-color;
                
             }   
-            //  &:has(+ .form-control:disabled){
-             
-            // }      
+            &:has(+ select.form-control:disabled){
+              z-index: 1;
+            }      
         }
+
+        // select.form-control{
+            
+        // }
 
        
     }

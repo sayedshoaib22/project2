@@ -57,6 +57,61 @@ img {
      object-fit: cover;
 }
 
+select,
+::picker(select) {
+  -webkit-appearance: base-select;
+     -moz-appearance: base-select;
+          appearance: base-select;
+}
+
+select::picker-icon {
+  color: #666;
+  transition: 0.4s rotate;
+}
+
+select:open::picker-icon {
+  rotate: 180deg;
+}
+
+::picker(select) {
+  border: none;
+}
+
+option {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  border: 2px solid #ddd;
+  background: #eee;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+option:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+option:not(option:last-of-type) {
+  border-bottom: none;
+}
+
+option:nth-of-type(odd) {
+  background: #fff;
+}
+
+option:hover,
+option:focus {
+  background: #a8dadc;
+}
+
+.my-2 {
+  margin-block: 2rem;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("/assets/font/Roboto/Roboto-VariableFont_wdth,wght.ttf");
@@ -220,6 +275,9 @@ img {
   top: -10px;
   margin-bottom: 0.5rem;
   background: #fff;
+}
+.form-group .form-label:has(+ select.form-control:disabled) {
+  z-index: 1;
 }
 .form-check {
   position: relative;
