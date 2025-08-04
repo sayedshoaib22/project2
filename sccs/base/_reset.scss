@@ -67,7 +67,7 @@ option {
   gap: 20px;
 
   border: 2px solid #ddd;
-  background: #eee;
+  background:$white-color;
   padding: 10px;
   transition: 0.4s;
 }
@@ -84,7 +84,7 @@ option:not(option:last-of-type) {
 }
 
 option:nth-of-type(odd) {
-  background: #fff;
+  background:$white-color;
 }
 
 option:hover,
