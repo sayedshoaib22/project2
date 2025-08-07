@@ -100,7 +100,7 @@ option:not(option:last-of-type) {
 }
 
 option:nth-of-type(odd) {
-  background: #fff;
+  background: #f1faee;
 }
 
 option:hover,
@@ -116,6 +116,62 @@ option:focus {
   font-family: "Roboto";
   src: url("/assets/font/Roboto/Roboto-VariableFont_wdth,wght.ttf");
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 20px;
+}
+.row .col {
+  flex: 1 0 auto;
+}
+.row .col-1 {
+  flex: 0 0 8.33333%;
+}
+.row .col-2 {
+  flex: 0 0 16.66667%;
+}
+.row .col-3 {
+  flex: 0 0 25%;
+}
+.row .col-4 {
+  flex: 0 0 33.33333%;
+}
+.row .col-5 {
+  flex: 0 0 41.66667%;
+}
+.row .col-6 {
+  flex: 0 0 50%;
+}
+.row .col-7 {
+  flex: 0 0 58.33333%;
+}
+.row .col-8 {
+  flex: 0 0 66.66667%;
+}
+.row .col-9 {
+  flex: 0 0 75%;
+}
+.row .col-10 {
+  flex: 0 0 83.33333%;
+}
+.row .col-11 {
+  flex: 0 0 91.66667%;
+}
+.row .col-12 {
+  flex: 0 0 100%;
+}
+.row .col-auto {
+  flex: 0 0 auto;
+}
+@media (max-width: 480px) {
+  .row .col-1, .row .col-2, .row .col-3, .row .col-4, .row .col-5, .row .col-6, .row .col-7, .row .col-8, .row .col-9, .row .col-10, .row .col-11, .row .col-12 {
+    flex: 0 0 100%;
+  }
+}
+
 .btn {
   display: inline-flex;
   position: relative;

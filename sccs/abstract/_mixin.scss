@@ -1,5 +1,14 @@
 
 
+@mixin flex($hstart: flex-start, $vstart: flex-start,$direction: row) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $hstart;
+    align-items: $vstart;
+    flex-direction: $direction;
+}
+
+
 
 
 
