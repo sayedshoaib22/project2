@@ -1,3 +1,8 @@
+@use '../base' as *;
+@use '../abstract' as *;
+@use 'sass:color';
+
+
 .btn{
     display: inline-flex;
     position: relative;
@@ -13,8 +18,9 @@
     cursor: pointer;
     
     &:hover{
-        background: lighten($light-color, 10%);
+        background: color.adjust($light-color, $lightness: 10%);    
         color: $dark-color;
+
     }
 
 

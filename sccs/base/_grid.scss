@@ -1,3 +1,4 @@
+@use '../abstract/mixin' as *;
 .row{
     @include flex();
     gap: 20px;
@@ -21,4 +22,5 @@
             flex: 0 0 100%;
         }
     }
+    
 }
