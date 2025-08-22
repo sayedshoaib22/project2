@@ -18,7 +18,7 @@
     cursor: pointer;
     
     &:hover{
-        background: color.adjust($light-color, $lightness: 10%);    
+        background: color.adjust($light-color, $lightness: 10%);
         color: $dark-color;
 
     }
